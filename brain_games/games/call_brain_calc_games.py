@@ -12,7 +12,6 @@ def calculate(operator, number1, number2):
             return number1 * number2
         case _:
             raise ValueError("Unknown operator")
-    return 0
 
 
 def generate_round():
