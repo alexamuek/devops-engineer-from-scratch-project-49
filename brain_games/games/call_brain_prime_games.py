@@ -3,7 +3,7 @@ from brain_games.utils import get_random_int
 
 
 def is_prime(number):
-    if (number == 1):
+    if (number <= 1):
         return False
     for divisor in range(2, number):
         if (number % divisor == 0):
