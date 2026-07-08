@@ -17,16 +17,14 @@ def calculate(number1, number2):
 
 
 def generate_round():
-    min_value = 1
-    max_value = 100
-    number1 = get_random_int(min_value, max_value)
-    number2 = get_random_int(min_value, max_value)
-    question_part = f"{number1} {number2}"
-    answer = calculate(number1, number2)
-    return [question_part, str(answer)]
+    MIN_VALUE = 1
+    [number1, number2] = [get_random_int(min=MIN_VALUE) for _ in range(2)]
+    numbers_to_ask = f"{number1} {number2}"
+    expected_answer = calculate(number1, number2)
+    return [numbers_to_ask, str(expected_answer)]
 
 
 def call_brain_gcd():
-    description = 'Find the greatest common divisor of given numbers.'
+    DESCRIPTION = 'Find the greatest common divisor of given numbers.'
     # call engine
-    game_engine(generate_round, description)
+    game_engine(generate_round, DESCRIPTION)

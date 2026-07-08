@@ -7,14 +7,12 @@ def is_even(number):
 
 
 def generate_round():
-    min_value = 0
-    max_value = 100
-    question_part = get_random_int(min_value, max_value)
-    expected_answer = "yes" if is_even(question_part) else "no"
-    return [question_part, expected_answer]
+    number_to_ask = get_random_int()
+    expected_answer = "yes" if is_even(number_to_ask) else "no"
+    return [number_to_ask, expected_answer]
 
 
 def call_brain_even():
-    description = 'Answer "yes" if the number is even, otherwise answer "no".'
+    DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'
     # call engine
-    game_engine(generate_round, description)
+    game_engine(generate_round, DESCRIPTION)

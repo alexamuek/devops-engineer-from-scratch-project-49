@@ -5,23 +5,21 @@ from brain_games.utils import get_random_int
 def is_prime(number):
     if (number == 1):
         return False
-    for divider in range(2, number):
-        if (number % divider == 0):
+    for divisor in range(2, number):
+        if (number % divisor == 0):
             return False
     return True
 
 
 def generate_round():
-    min_value = 0
-    max_value = 100
-    question_part = get_random_int(min_value, max_value)
-    expected_answer = "yes" if is_prime(question_part) else "no"
-    return [question_part, expected_answer]
+    number_to_ask = get_random_int()
+    expected_answer = "yes" if is_prime(number_to_ask) else "no"
+    return [number_to_ask, expected_answer]
 
 
 def call_brain_prime():
-    yes_part = 'Answer "yes" if given number is prime.'
-    no_part = 'Otherwise answer "no".'
-    description = f"{yes_part} {no_part}"
+    YES_PART = 'Answer "yes" if given number is prime.'
+    NO_PART = 'Otherwise answer "no".'
+    description = f"{YES_PART} {NO_PART}"
     # call engine
     game_engine(generate_round, description)

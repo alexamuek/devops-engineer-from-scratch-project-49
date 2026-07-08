@@ -15,29 +15,28 @@ def calculate(operator, number1, number2):
 
 
 def generate_round():
-    number_boundaries = [0] * 2
-    operators = '+-*'
-    operator = operators[get_random_int(0, len(operators) - 1)]
+    scope = [0] * 2
+    OPERATORS = '+-*'
+    operator = OPERATORS[get_random_int(max=len(OPERATORS) - 1)]
     match operator:
         case '+':
-            number_boundaries[0] = 0
-            number_boundaries[1] = 50
+            scope[0] = 0
+            scope[1] = 50
         case '-':
-            number_boundaries[0] = 0
-            number_boundaries[1] = 100
+            scope[0] = 0
+            scope[1] = 100
         case '*':
-            number_boundaries[0] = 0
-            number_boundaries[1] = 10
+            scope[0] = 0
+            scope[1] = 10
         case _:
             raise ValueError("Unknown operator")
-    first_operand = get_random_int(number_boundaries[0], number_boundaries[1])
-    second_operand = get_random_int(number_boundaries[0], number_boundaries[1])
-    expression = f"{first_operand} {operator} {second_operand}"
-    answer = calculate(operator, first_operand, second_operand)
-    return [expression, str(answer)]
+    [operand1, operand2] = [get_random_int(*scope) for _ in range(2)]
+    expression_to_ask = f"{operand1} {operator} {operand2}"
+    expected_answer = calculate(operator, operand1, operand2)
+    return [expression_to_ask, str(expected_answer)]
 
 
 def call_brain_calc():
-    description = 'What is the result of the expression?'
+    DESCRIPTION = 'What is the result of the expression?'
     # call engine
-    game_engine(generate_round, description)
+    game_engine(generate_round, DESCRIPTION)
