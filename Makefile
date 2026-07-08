@@ -4,6 +4,10 @@ brain-games:
 	uv run brain-games
 brain-evens:
 	uv run brain-even
+brain-calc:
+	uv run brain-calc
+brain-gcd:
+	uv run brain-gcd
 build:
 	uv build
 package-install:
