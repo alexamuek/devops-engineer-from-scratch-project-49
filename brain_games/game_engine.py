@@ -6,7 +6,7 @@ def game_engine(generate_round, description):
     name = prompt.string('May I have your name? ')
     print(f"Hello, {name}!")
     print(description)
-    for i in range(3):
+    for _ in range(3):
         round_data = generate_round()
         print(f"Question: {round_data[0]}")
         answer = prompt.string('Your answer: ')
