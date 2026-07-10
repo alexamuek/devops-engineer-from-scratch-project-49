@@ -3,7 +3,11 @@
 
 How to install and run brain-even game?  
 [![asciicast](https://asciinema.org/a/ttyr0y77mV5kk4M0.svg)](https://asciinema.org/a/ttyr0y77mV5kk4M0)  
-How to install and run brain-calc game? Use [asciinema](https://asciinema.org/a/YHmUH9iRtYGntpA0)  
-How to install and run brain-gcd game? Use [asciinema](https://asciinema.org/a/zPJ3jDeYD2HdabHA)  
-How to install and run brain-progression game? Use [asciinema](https://asciinema.org/a/ExbgSzlJHLcAUgGH)  
-How to install and run brain-prime game? Use [asciinema](https://asciinema.org/a/g5uvPJANBdMxn2cc) 
+How to install and run brain-calc game?  
+[![asciicast](https://asciinema.org/a/YHmUH9iRtYGntpA0.svg)](https://asciinema.org/a/YHmUH9iRtYGntpA0)   
+How to install and run brain-gcd game?  
+[![asciicast](https://asciinema.org/a/zPJ3jDeYD2HdabHA.svg)](https://asciinema.org/a/zPJ3jDeYD2HdabHA)  
+How to install and run brain-progression game?  
+[![asciicast](https://asciinema.org/a/ExbgSzlJHLcAUgGH.svg)](https://asciinema.org/a/ExbgSzlJHLcAUgGH)  
+How to install and run brain-prime game?  
+[![asciicast](https://asciinema.org/a/g5uvPJANBdMxn2cc.svg)](https://asciinema.org/a/g5uvPJANBdMxn2cc)
