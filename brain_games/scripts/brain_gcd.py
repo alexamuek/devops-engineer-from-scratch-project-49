@@ -1,5 +1,8 @@
-from brain_games.games.call_brain_gcd_games import call_brain_gcd
+from brain_games.game_engine import game_engine
+from brain_games.games.call_brain_gcd_games import generate_round
 
 
 def main():
-	call_brain_gcd()
+    DESCRIPTION = 'Find the greatest common divisor of given numbers.'
+    # call engine
+    game_engine(generate_round, DESCRIPTION)

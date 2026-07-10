@@ -1,4 +1,3 @@
-from brain_games.game_engine import game_engine
 from brain_games.utils import get_random_int
 
 
@@ -22,9 +21,3 @@ def generate_round():
     numbers_to_ask = f"{number1} {number2}"
     expected_answer = calculate(number1, number2)
     return [numbers_to_ask, str(expected_answer)]
-
-
-def call_brain_gcd():
-    DESCRIPTION = 'Find the greatest common divisor of given numbers.'
-    # call engine
-    game_engine(generate_round, DESCRIPTION)

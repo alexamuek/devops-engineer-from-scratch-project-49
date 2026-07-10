@@ -1,4 +1,3 @@
-from brain_games.game_engine import game_engine
 from brain_games.utils import get_random_int
 
 
@@ -34,9 +33,3 @@ def generate_round():
     expression_to_ask = f"{operand1} {operator} {operand2}"
     expected_answer = calculate(operator, operand1, operand2)
     return [expression_to_ask, str(expected_answer)]
-
-
-def call_brain_calc():
-    DESCRIPTION = 'What is the result of the expression?'
-    # call engine
-    game_engine(generate_round, DESCRIPTION)

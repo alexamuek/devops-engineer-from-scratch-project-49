@@ -1,4 +1,3 @@
-from brain_games.game_engine import game_engine
 from brain_games.utils import get_random_int
 
 
@@ -12,9 +11,3 @@ def generate_round():
     round_data[0] = " ".join(progression)
     round_data[1] = str(start + index_to_hide * step)
     return round_data
-
-
-def call_brain_progression():
-    DESCRIPTION = 'What number is missing in the progression?'
-    # call engine
-    game_engine(generate_round, DESCRIPTION)
