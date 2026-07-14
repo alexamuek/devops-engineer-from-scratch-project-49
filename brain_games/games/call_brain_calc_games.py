@@ -1,5 +1,7 @@
 from brain_games.utils import get_random_int
 
+DESCRIPTION = 'What is the result of the expression?'
+
 
 def calculate(operator, number1, number2):
     match operator:
@@ -13,7 +15,7 @@ def calculate(operator, number1, number2):
             raise ValueError("Unknown operator")
 
 
-def generate_round():
+def get_question_and_right_answer():
     scope = [0] * 2
     OPERATORS = '+-*'
     operator = OPERATORS[get_random_int(max=len(OPERATORS) - 1)]
@@ -32,4 +34,8 @@ def generate_round():
     [operand1, operand2] = [get_random_int(*scope) for _ in range(2)]
     expression_to_ask = f"{operand1} {operator} {operand2}"
     expected_answer = calculate(operator, operand1, operand2)
-    return [expression_to_ask, str(expected_answer)]
+    return expression_to_ask, str(expected_answer)
+
+
+def prepare():
+    return get_question_and_right_answer, DESCRIPTION

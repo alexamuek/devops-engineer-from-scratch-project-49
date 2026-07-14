@@ -3,13 +3,12 @@ import prompt
 from .cli import welcome_user
 
 
-def game_engine(generate_round, description):
+def launch_game(get_round_data, description):
     name = welcome_user()
-    print(f"Hello, {name}!")
     print(description)
     ROUNDS = 3
     for _ in range(ROUNDS):
-        round_data = generate_round()
+        round_data = get_round_data()
         print(f"Question: {round_data[0]}")
         answer = prompt.string('Your answer: ')
         if (answer.lower() == round_data[1]):
