@@ -1,6 +1,6 @@
 from brain_games.utils import get_random_int
 
-DESCRIPTION = 'What is the result of the expression?'
+TASK = 'What is the result of the expression?'
 
 
 def calculate(operator, number1, number2):
@@ -35,7 +35,3 @@ def get_question_and_right_answer():
     expression_to_ask = f"{operand1} {operator} {operand2}"
     expected_answer = calculate(operator, operand1, operand2)
     return expression_to_ask, str(expected_answer)
-
-
-def prepare():
-    return get_question_and_right_answer, DESCRIPTION

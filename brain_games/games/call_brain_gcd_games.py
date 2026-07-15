@@ -1,6 +1,6 @@
 from brain_games.utils import get_random_int
 
-DESCRIPTION = 'Find the greatest common divisor of given numbers.'
+TASK = 'Find the greatest common divisor of given numbers.'
 
 
 def calculate(number1, number2):
@@ -23,7 +23,3 @@ def get_question_and_right_answer():
     numbers_to_ask = f"{number1} {number2}"
     expected_answer = calculate(number1, number2)
     return numbers_to_ask, str(expected_answer)
-
-
-def prepare():
-    return get_question_and_right_answer, DESCRIPTION

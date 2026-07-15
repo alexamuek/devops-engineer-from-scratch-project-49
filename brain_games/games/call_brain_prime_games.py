@@ -1,7 +1,6 @@
 from brain_games.utils import get_random_int
 
-YES_PART = 'Answer "yes" if given number is prime.'
-NO_PART = 'Otherwise answer "no".'
+TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def is_prime(number):
@@ -16,9 +15,4 @@ def is_prime(number):
 def get_question_and_right_answer():
     number_to_ask = get_random_int()
     expected_answer = "yes" if is_prime(number_to_ask) else "no"
-    return [number_to_ask, expected_answer]
-
-
-def prepare():
-    description = f"{YES_PART} {NO_PART}"
-    return get_question_and_right_answer, description
+    return number_to_ask, expected_answer
